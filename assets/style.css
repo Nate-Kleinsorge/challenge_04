@@ -1,0 +1,27 @@
+:root {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#countdown {
+    padding: 10px;
+}
+
+button {
+    background-color: purple;
+    color: white;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+}
