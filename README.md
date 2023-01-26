@@ -25,4 +25,5 @@ Go to the deployed website and start the quiz, when done enter initials and you 
 ## How to Contribute:
 To contribute, you can start with adding more questions, or you can make the score sum add up correctly.
 
-
+<a href="">Repository</a>
+<a href="">Deployed website</a>

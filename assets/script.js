@@ -2,7 +2,6 @@ var highScoreBtn = document.querySelector(".high-score-btn");
 var startbtn = document.querySelector(".start-btn");
 var quizStart = document.querySelector(".quiz-start");
 var submitHs = document.getElementById("submit-hs");
-var score = 0;
 
 var page1 = document.querySelector(".quiz-pg1");
 var page2 = document.querySelector(".quiz-pg2");
@@ -12,6 +11,7 @@ var page5 = document.querySelector(".quiz-pg5");
 var highPage = document.querySelector(".high-page");
 
 var buttons = document.getElementsByClassName("btn");
+var time = buttons.length * 15;
 
 //start quiz
 startbtn.addEventListener("click", function() {
@@ -21,12 +21,11 @@ startbtn.addEventListener("click", function() {
 });
 
 //timer
-var num = 100;
 function startTimer() {
     var myinterval = setInterval(function() {
-        document.querySelector("#countdown").textContent = "timer: " + num;
-        num--;
-        if (num < 0) {
+        document.querySelector("#countdown").textContent = "timer: " + time;
+        time--;
+        if (time < 0) {
             clearInterval(myinterval);
         };
     }, 1000);
@@ -38,7 +37,6 @@ for (var i = 0; i < buttons.length; i++) {
         var element = event.target;
         var parent = element.parentNode.parentNode.parentNode;
         if (element.matches("#right")) {
-            score = score + 10;
             getNextPage(parent);
         } else {
             num = num - 10;
@@ -68,7 +66,7 @@ function getNextPage(parent) {
 
 //display score
 var displayScore = document.querySelector("#display-score");
-displayScore.textContent = "Your final score is: " + score;
+displayScore.textContent = "Your final score is: " + time;
 
 //highscore page
 submitHs.addEventListener("click", function(score) {
