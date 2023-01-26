@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <button class="high-score-btn">View high scores</button>
+        <a href="./highscores.html"><button class="high-score-btn">View Highscores</button></a>
         <p id="countdown"></p>
     </header>
     <main class="container">
@@ -18,17 +18,61 @@
             <p>Press start to take the quiz</p>
             <button class="start-btn">Start Quiz</button>
         </div>
-        <div class="quiz-pg1" hidden>
-            <p></p>
+        <div class="quiz-pg1" id="hide">
+            <h2>Commonly used data types do not include...</h2>
+            <hr/>
+            <ul>
+                <li><button class="btn">1. strings</button></li>
+                <li><button class="btn">2. arrays</button></li>
+                <li><button class="btn" id="right">3. hospitals</button></li>
+                <li><button class="btn">4. objects</button></li>
+            </ul>
         </div>
-        <div class="quiz-pg2" hidden>
-
+        <div class="quiz-pg2" id="hide">
+            <h2>The condition of an if else statement is enclosed in ____.</h2>
+            <hr/>
+            <ol>
+                <li><button class="btn">Brackets</button></li>
+                <li><button class="btn" id="right">Parenthesees</button></li>
+                <li><button class="btn">curly brackets</button></li>
+                <li><button class="btn">nothing</button></li>
+            </ol>
         </div>
-        <div class="quiz-pg3" hidden>
-
+        <div class="quiz-pg3" id="hide">
+            <h2>arrays in javascript can be used to store ____.</h2>
+            <hr/>
+            <ol>
+                <li><button class="btn">strings</button></li>
+                <li><button class="btn">numbers</button></li>
+                <li><button class="btn">booleans</button></li>
+                <li><button class="btn" id="right">all of the above</button></li>
+            </ol>
         </div>
-        <div class="quiz-pg4" hidden>
-
+        <div class="quiz-pg4" id="hide">
+            <h2>string values must be enclosed within ____.</h2>
+            <hr/>
+            <ol>
+                <li><button class="btn">{}</button></li>
+                <li><button class="btn">[]</button></li>
+                <li><button class="btn">()</button></li>
+                <li><button class="btn" id="right">""</button></li>
+            </ol>
+        </div>
+        <div class="quiz-pg5" id="hide">
+            <h2>how do you select the parent of an element?</h2>
+            <hr/>
+            <ol>
+                <li><button class="btn">.getParentElement()</button></li>
+                <li><button class="btn" id="right">.parentNode</button></li>
+                <li><button class="btn">Nodeparent</button></li>
+                <li><button class="btn">element.parent[0]</button></li>
+            </ol>
+        </div>
+        <div class="high-page" id="hide">
+            <h2>All Done!</h2>
+            <p id="display-score"></p>
+            <input type="text" id="input-initials">
+            <button type="submit" id="submit-hs">submit</button>
         </div>
     </main>
     <script src="./assets/script.js"></script>
